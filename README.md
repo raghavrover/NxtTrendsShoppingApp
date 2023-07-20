@@ -1,4 +1,4 @@
-In this project, I've built a **Nxt Trendz Online Shopping Website** by using React library and a few third party npm packages.
+In this project, I built a **Nxt Trendz Online Shopping Website** using React library and a few third-party npm packages.
 <br/>
 
 ### Design Files
@@ -17,28 +17,28 @@ In this project, I've built a **Nxt Trendz Online Shopping Website** by using Re
 <summary>Login</summary>
 <br/>
 
-- User is Authenticated by making a HTTP POST request to the **NxtTrendzLoginApiUrl**. If authentication is successful a JWT Token is sent in response for further authorization and directed to **HOME** Page. If authentication fails an ERROR message will be displayed.
+- User is Authenticated by making an HTTP POST request to the **NxtTrendzLoginApiUrl**. If authentication is successful a JWT Token is sent in response for further authorization and directed to **HOME** Page. If authentication fails an ERROR message will be displayed.
 </details>
 
 <details>
 <summary>Home</summary>
 <br/>
 
-- In home page by using Navigation menu a user can navigate to different pages like Products, Cart and Login.
-- And a description about clothes and to get you started Shopping.
+- In the home page by using the Navigation Menu a user can navigate to different pages like Products, Cart, and Login.
+- And a description of clothes to get you started Shopping.
 </details>
 
 <details>
 <summary>Products</summary>
 <br/>
 
-- All products data is fetched by making an HTTP GET request to **NxtTrendzAllProductsApiUrl** and the fetched data will be rendered.
-- Another HTTP GET request is made to the **NxtTrendzPrimeDealsApiUrl** to get Prime Deals. If the user is of prime type all prime deals are fetched and rendered. Incase if the user is non-prime API call is rejected and the rejection will be handled and a banner will be displayed.
+- Products data is fetched by making an HTTP GET request to **NxtTrendzAllProductsApiUrl** and the fetched data will be rendered.
+- Another HTTP GET request is made to the **NxtTrendzPrimeDealsApiUrl** to get Prime Deals. If the user is of prime type all prime deals are fetched and rendered. If the user is non-prime API call is rejected, the rejection will be handled and a banner will be displayed.
   <details>
   <summary>Features</summary>
   <br/>
   
-  - Filter the products based category, rating, and price.
+  - Filter the products based on category, rating, and price.
   - Search for a product.
   </details>
 
@@ -47,7 +47,7 @@ In this project, I've built a **Nxt Trendz Online Shopping Website** by using Re
 <summary>Specific Product</summary>
 <br/>
 
-- Product data is fetched by making a HTTP GET request to the **NxtTrendzProductDetailsApiUrl** and data is rendered
+- Product data is fetched by making an HTTP GET request to the **NxtTrendzProductDetailsApiUrl** and data is rendered
 - You can find all details about product price, description, availability, rating, reviews, brand.
 - Select your desired Quantity and add the product to your Cart.
 - You can also find similar products related to the product.
@@ -56,13 +56,16 @@ In this project, I've built a **Nxt Trendz Online Shopping Website** by using Re
 <summary>Cart</summary>
 <br/>
 
-- User can find all the products that we're added to the Cart. <details> <summary>Features</summary> <br/>
-
-      - User has the flexibility to change to desired quantity of a particular product.
-      - User can remove all products in the cart.
-      - Price of product is calculated dynamically when a user changes quantity.
-      - Order total price is displayed at the of cart products.
-      </details>
+- User can find all the products that we're added to the Cart.
+  <details> 
+  <summary>Features</summary> 
+  <br/>
+    
+  - User has the flexibility to change to desired quantity of a particular product.
+  - User can remove all products from the cart.
+  - The price of a product item is calculated dynamically when a user changes quantity.
+  - Order total price is displayed at the of cart products.
+  </details>
 
 </details>
 
