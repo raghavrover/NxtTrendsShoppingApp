@@ -1,13 +1,4 @@
 In this project, I've built a **Nxt Trendz Online Shopping Website** by using React library and a few third party npm packages.
-
-### Refer to the video below:
-
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
 <br/>
 
 ### Design Files
@@ -41,20 +32,20 @@ In this project, I've built a **Nxt Trendz Online Shopping Website** by using Re
 <summary>Products</summary>
 <br/>
 
-- All products data is fetched by making a HTTP GET request to **NxtTrendzAllProductsApiUrl** and the fetched data will be rendered.
+- All products data is fetched by making an HTTP GET request to **NxtTrendzAllProductsApiUrl** and the fetched data will be rendered.
 - Another HTTP GET request is made to the **NxtTrendzPrimeDealsApiUrl** to get Prime Deals. If the user is of prime type all prime deals are fetched and rendered. Incase if the user is non-prime API call is rejected and the rejection will be handled and a banner will be displayed.
   <details>
-    <summary>Features</summary>
-    <br/>
-
+  <summary>Features</summary>
+  <br/>
+  
   - Filter the products based category, rating, and price.
   - Search for a product.
-    </details>
-
   </details>
-  <details>
-  <summary>Specific Product</summary>
-  <br/>
+
+</details>
+<details>
+<summary>Specific Product</summary>
+<br/>
 
 - Product data is fetched by making a HTTP GET request to the **NxtTrendzProductDetailsApiUrl** and data is rendered
 - You can find all details about product price, description, availability, rating, reviews, brand.
