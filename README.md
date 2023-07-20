@@ -66,7 +66,12 @@ In this project, I built a **Nxt Trendz Online Shopping Website** using React li
   - The price of a product item is calculated dynamically when a user changes quantity.
   - Order total price is displayed at the of cart products.
   </details>
+</details>  
+<details>
+<summary>Not Found</summary>
+<br/>
 
+- When a user enters any **url** other than the defined paths(urls), not-found route will be rendered.  
 </details>
 
 ### Login Credentials
