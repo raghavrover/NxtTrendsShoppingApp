@@ -6,10 +6,11 @@ import './index.css'
 
 class LoginForm extends Component {
   state = {
-    username: '',
-    password: '',
+    username: 'rahul',
+    password: 'rahul@2021',
     showSubmitError: false,
     errorMsg: '',
+    showPassword: false,
   }
 
   onChangeUsername = event => {
@@ -52,7 +53,7 @@ class LoginForm extends Component {
   }
 
   renderPasswordField = () => {
-    const {password} = this.state
+    const {password, showPassword} = this.state
 
     return (
       <>
@@ -60,7 +61,7 @@ class LoginForm extends Component {
           PASSWORD
         </label>
         <input
-          type="password"
+          type={showPassword ? 'text' : 'password'}
           id="password"
           className="password-input-field"
           value={password}
@@ -91,6 +92,24 @@ class LoginForm extends Component {
     )
   }
 
+  renderShowPasswordField = () => (
+    <>
+      <input
+        type="checkbox"
+        id="checkBox"
+        className="show-password-check-box"
+        onChange={() => {
+          this.setState(prev => ({
+            showPassword: !prev.showPassword,
+          }))
+        }}
+      />
+      <label className="show-password-label" htmlFor="checkBox">
+        Show Password
+      </label>
+    </>
+  )
+
   render() {
     const {showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
@@ -119,9 +138,15 @@ class LoginForm extends Component {
           />
           <div className="input-container">{this.renderUsernameField()}</div>
           <div className="input-container">{this.renderPasswordField()}</div>
+          <div className="show-password-container">
+            {this.renderShowPasswordField()}
+          </div>
           <button type="submit" className="login-button">
             Login
           </button>
+          <p className="show-password-label">
+            Login and explore with the pre-filled credentials
+          </p>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
         </form>
       </div>
