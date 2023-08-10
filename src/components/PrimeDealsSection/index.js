@@ -77,6 +77,7 @@ class PrimeDealsSection extends Component {
   renderPrimeDealsFailureView = () => (
     <img
       src="https://assets.ccbp.in/frontend/react-js/exclusive-deals-banner-img.png"
+      loading="lazy"
       alt="register prime"
       className="register-prime-img"
     />

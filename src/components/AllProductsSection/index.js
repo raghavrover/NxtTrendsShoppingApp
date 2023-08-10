@@ -138,6 +138,7 @@ class AllProductsSection extends Component {
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-products-error-view.png"
         alt="all-products-error"
         className="products-failure-img"
+        loading="lazy"
       />
       <h1 className="product-failure-heading-text">
         Oops! Something Went Wrong
@@ -175,6 +176,7 @@ class AllProductsSection extends Component {
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
           className="no-products-img"
           alt="no products"
+          loading="lazy"
         />
         <h1 className="no-products-heading">No Products Found</h1>
         <p className="no-products-description">

@@ -27,7 +27,18 @@ class ProductItemDetails extends Component {
     quantity: 1,
   }
 
+  /* eslint-disable */
+  UNSAFE_componentWillMount() {
+    window.removeEventListener('popstate', this.handlePopState)
+  }
+  /* eslint-enable */
+
   componentDidMount() {
+    this.getProductData()
+    window.addEventListener('popstate', this.handlePopState)
+  }
+
+  handlePopState = () => {
     this.getProductData()
   }
 
@@ -44,11 +55,9 @@ class ProductItemDetails extends Component {
   })
 
   getProductData = async () => {
-    const {match, history} = this.props
-    console.log('pDR', history)
+    const {match} = this.props
     const {params} = match
     const {id} = params
-
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
@@ -102,6 +111,7 @@ class ProductItemDetails extends Component {
     <div className="product-details-error-view-container">
       <img
         alt="error view"
+        loading="lazy"
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
         className="error-view-image"
       />
@@ -159,6 +169,7 @@ class ProductItemDetails extends Component {
                       src="https://assets.ccbp.in/frontend/react-js/star-img.png"
                       alt="star"
                       className="star"
+                      loading="lazy"
                     />
                   </div>
                   <p className="reviews-count">{totalReviews} Reviews</p>

@@ -16,6 +16,7 @@ const SimilarProductItem = props => {
           src={imageUrl}
           className="similar-product-img"
           alt={`similar product ${title}`}
+          loading="lazy"
         />
         <p className="similar-product-title">{title}</p>
         <p className="similar-products-brand">by {brand}</p>

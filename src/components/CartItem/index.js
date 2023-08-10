@@ -27,7 +27,12 @@ const CartItem = props => (
 
       return (
         <li className="cart-item">
-          <img className="cart-product-image" src={imageUrl} alt={title} />
+          <img
+            className="cart-product-image"
+            src={imageUrl}
+            alt={title}
+            loading="lazy"
+          />
           <div className="cart-item-details-container">
             <div className="cart-product-title-brand-container">
               <p className="cart-product-title">{title}</p>

@@ -9,7 +9,12 @@ const ProductCard = props => {
   return (
     <li className="product-item">
       <Link to={`/products/${id}`} className="link-item">
-        <img src={imageUrl} alt="product" className="thumbnail" />
+        <img
+          src={imageUrl}
+          alt="product"
+          className="thumbnail"
+          loading="lazy"
+        />
         <h1 className="title">{title}</h1>
         <p className="brand">by {brand}</p>
         <div className="product-details">
